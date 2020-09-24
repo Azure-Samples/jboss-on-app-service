@@ -60,6 +60,11 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
 
 1. In the "Connection security" panel of the Azure Database blade, toggle the "Allow access to Azure services" button to the "ON" position.
 
+   you can also run 
+    ```bash 
+     az postgres server firewall-rule create -g <group-name> -s <server-name> -n AllowAllWindowsAzureIps --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0 
+     ```
+
 ### Configure JBoss EAP for PostgreSQL
 
 1. Next, we need to edit our Java Transaction API configuration so that our Java application will communicate with Postgres instead of the in-memory H2 database we were using previously. Open an editor to [`src/main/resources/META-INF/persistence.xml`](agoncal-application-petstore-ee7/src/main/resources/META-INF/persistence.xml). Replace the value for `<jta-data-source>` with `java:jboss/datasources/postgresDS`. Your JTA XML should now have this setting:
