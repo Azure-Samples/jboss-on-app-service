@@ -59,9 +59,9 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
 
 10. Create three app settings on the site:
 
-    - `POSTGRES_CONNECTIONURL`: The connection URL for the server, the format should look like `jdbc:postgresql://freebergserver123.postgres.database.azure.com:5432`.
-    - `POSTGRES_USERNAME`: The username for the server (provided in the previous command)
-    - `POSTGRES_PASSWORD`: The password for the server (provided in the previous command)
+    - `POSTGRES_CONNECTION_URL`: The connection URL for the server, the format should look like `jdbc:postgresql://freebergserver123.postgres.database.azure.com:5432?ssl=true`.
+    - `POSTGRES_SERVER_ADMIN_FULL_NAME`: The username for the server (provided in the previous command)
+    - `POSTGRES_SERVER_ADMIN_PASSWORD`: The password for the server (provided in the previous command)
 
 11. Before deploying our reconfigured application, we must update the JBoss application server with the Postgres module and its dependencies. To configure the server we will need the four files in the  [`db_config/`](db_config/) directory:
 
