@@ -2,6 +2,8 @@
 
 In this tutorial you will create a JBoss EAP 7.2 instance on Azure App Service. Once the site is created, you will deploy a demo app and configure the JBoss server to communicate with PostgreSQL.
 
+[![Demo video on YouTube](images/demo-video.PNG)](http://www.youtube.com/watch?v=rsx0PxIkxyg "JBoss EAP demo video")
+
 > Have feedback for us? [Email us!](mailto:java-on-app-service@microsoft.com)
 
 ## Prerequisites
