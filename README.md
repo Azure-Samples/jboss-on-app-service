@@ -60,7 +60,8 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
 
 1. In the "Connection security" panel of the Azure Database blade, toggle the "Allow access to Azure services" button to the "ON" position.
 
-   you can also run 
+   You can also run the following CLI command.
+   
     ```bash 
      az postgres server firewall-rule create -g <group-name> -s <server-name> -n AllowAllWindowsAzureIps --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0 
      ```
