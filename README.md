@@ -72,7 +72,7 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
 
 1. Create three app settings on the site:
 
-    - `POSTGRES_CONNECTION_URL`: The connection URL for the server, the format should look like `jdbc:postgresql://freebergserver123.postgres.database.azure.com:5432?ssl=true`.
+    - `POSTGRES_CONNECTION_URL`: The connection URL for the server, the format should look like `jdbc:postgresql://freebergserver123.postgres.database.azure.com:5432/petstore?ssl=true`.
     - `POSTGRES_SERVER_ADMIN_FULL_NAME`: The username for the server (provided in the previous command)
     - `POSTGRES_SERVER_ADMIN_PASSWORD`: The password for the server (provided in the previous command)
 
