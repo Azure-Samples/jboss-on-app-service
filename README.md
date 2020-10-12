@@ -87,11 +87,9 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
     - **startup_script.sh**: Finally, this shell script will be executed whenever your App Service instance is started. The script runs the JBoss CLI commands to configure the server with the data source module, driver, and expose the JNDI name.
     - **jboss-cli-commands.cli**: The JBoss CLI commands that will be executed by the startup script.
 
-1. Using an FTP tool of your choice, transfer the files in `db_config/` to `/home/site/deployments/tools/`.
+1. Using an FTP tool of your choice transfer database driver, XML module descriptor, and cli commands to `/home/site/deployments/tools/`. Upload the startup script to the `/home/` path as `/home/startup.sh`. App Service will automatically run the startup script if it follows that naming convention.
 
-1. In the App Service blade navigate to the "Application settings" panel. Under "Runtime", set the "Startup File" field to `/home/site/deployments/tools/startup_script.sh`. This will ensure that the shell script is run when the container starts.
-
-1. Restart the web app.
+1. Restart the web app. This will cause the web app to run the configuration script.
 
 1. Update [`persistence.xml`](agoncal-application-petstore-ee7/src/main/resources/META-INF/persistence.xml)
 
@@ -101,7 +99,7 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
     ...
     ```
 
-11. Repackage and redeploy
+11. Repackage and redeploy using the CLI commands below.
 
     **PowerShell**
     
@@ -116,6 +114,8 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
     mvn clean install -DskipTests
     curl -X POST -u <username> --data-binary @"<war-file-path>" https://<app-name>.scm.azurewebsites.net/api/wardeploy
     ```
+
+12. Finally, browse to the web app. The pet store app is configured such that if it cannot connect to Postgres, then it will not start. So if you can see and interact with the Petstore application, then you have successfully completed the tutorial! See the resources below for more info. If you got stuck, please [file an issue](https://github.com/Azure-Samples/jboss-on-app-service/issues/new). 
 
 ## Resources
 
