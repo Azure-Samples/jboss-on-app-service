@@ -10,7 +10,7 @@ In this tutorial you will create a JBoss EAP 7.2 instance on Azure App Service. 
 
 To follow this tutorial, you will need...
 
-- Java installed locally
+- Java 8 installed locally
 - Maven installed locally
 - An Azure subscription
 
