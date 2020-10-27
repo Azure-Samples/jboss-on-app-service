@@ -20,7 +20,7 @@ This tutorial will walk through the process of creating a JBoss EAP site on App 
 
 ### Create a JBoss EAP site
 
-1. Open to the Azure Portal to the [Web App create blade](https://portal.azure.com/#create/Microsoft.WebSite). For **Runtime stack**, select **JBoss EAP 7.2 (Preview)**. JBoss EAP sites can only be created on Premium and Isolated App Service Plans.
+1. Open to the Azure Portal to the [Web App create blade](https://portal.azure.com/#create/Microsoft.WebSite). For **Runtime stack**, select **JBoss EAP 7.2 (Preview)**. JBoss EAP sites can only be created on Premium and Isolated App Service Plans ([more information](https://docs.microsoft.com/en-us/azure/app-service/configure-language-java?pivots=platform-linux#jboss-eap-hardware-options)).
     ![Portal create flow](images/portal-create.PNG)
     
 2. Once the site is created, browse to the site and you should see the default (aka "parking") page.
